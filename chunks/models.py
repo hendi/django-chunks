@@ -9,13 +9,13 @@ class Chunk(models.Model):
     any template with the use of a special template
     tag
     """
-    key = models.CharField(_(u'Key'), help_text=_(u"A unique name for this chunk of content"), blank=False, max_length=255, unique=True)
-    content = models.TextField(_(u'Content'), blank=True)
-    description = models.CharField(_(u'Description'), blank=True, max_length=64, help_text=_(u"Short Description"))
+    key = models.CharField(_('Key'), help_text=_("A unique name for this chunk of content"), blank=False, max_length=255, unique=True)
+    content = models.TextField(_('Content'), blank=True)
+    description = models.CharField(_('Description'), blank=True, max_length=64, help_text=_("Short Description"))
 
     class Meta:
-        verbose_name = _(u'chunk')
-        verbose_name_plural = _(u'chunks')
+        verbose_name = _('chunk')
+        verbose_name_plural = _('chunks')
 
     def __unicode__(self):
-        return u"%s" % (self.key,)
+        return "%s" % (self.key,)
